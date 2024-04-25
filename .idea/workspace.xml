@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83d34b14-d668-4b6c-921c-b040ff614288" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dados_corrida.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atualizar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Telemetria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Telemetria.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apresentacao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/excluir_corrida.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexoes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/gravador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexoes/conectarBT/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexoes/conectarBT/conexaoBT.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexoes/conexaoDB/Robo_corrida.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexoes/conexaoDB/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ver_corridas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexoes/conexaoDB/conexaoDB.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocios/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocios/entities/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocios/entities/corrida.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocios/gravador.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dados_corrida.db" beforeDir="false" afterPath="$PROJECT_DIR$/dados_corrida.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gravador.py" beforeDir="false" afterPath="$PROJECT_DIR$/gravador.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ver_corridas.py" beforeDir="false" afterPath="$PROJECT_DIR$/ver_corridas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.excluir_corrida.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gravador.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gravador_teste.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ver_corridas.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/alex/Documentos/GitHub/Telemetria&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.atualizar.executor": "Run",
+    "Python.excluir_corrida.executor": "Run",
+    "Python.gravador.executor": "Run",
+    "Python.gravador_teste.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.ver_corridas.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/alex/Documentos/GitHub/Telemetria",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="Telemetria" is-module-sdk="true">
@@ -76,7 +70,29 @@
       <recent name="C:\Users\Willi\OneDrive\Documentos\projetos python\Telemetria\negocios" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.gravador">
+  <component name="RunManager" selected="Python.ver_corridas">
+    <configuration name="atualizar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Telemetria" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/atualizar.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="excluir_corrida" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Telemetria" />
       <option name="ENV_FILES" value="" />
@@ -189,8 +205,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gravador" />
         <item itemvalue="Python.ver_corridas" />
+        <item itemvalue="Python.gravador" />
+        <item itemvalue="Python.atualizar" />
         <item itemvalue="Python.excluir_corrida" />
         <item itemvalue="Python.gravador_teste" />
       </list>

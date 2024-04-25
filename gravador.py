@@ -20,19 +20,20 @@ session = Session()
 
 def gravar_corrida():
     # Inicializa a comunicação serial com o Arduino
-    ser = serial.Serial('/dev/ttyUSB0', 9600)  # Modifique para a porta e a taxa de baud do seu Arduino
+    ser = serial.Serial('COM3', 9600)  # Modifique para a porta e a taxa de baud do seu Arduino
 
     # Lê os valores da porta serial
     p = float(ser.readline().decode().strip())
     i = float(ser.readline().decode().strip())
     d = float(ser.readline().decode().strip())
     initial_speed = float(ser.readline().decode().strip())
-
+    print("PID e velocidade incial gravada!!")
     # Lê os valores dos erros da porta serial
     erros = []
     for _ in range(10):
         erro = float(ser.readline().decode().strip())
         erros.append(erro)
+        print(erro)
 
     # Fecha a comunicação serial
     ser.close()
@@ -45,10 +46,9 @@ def gravar_corrida():
         else:
             print("Conceito inválido. Por favor, digite um valor entre 1 e 5.")
 
-
-
     # Cria um novo objeto Corrida com os valores lidos
-    corrida = Corrida(p=p, i=i, d=d, initial_speed=initial_speed, erros=erros,conceito=int(conceito))
+    erros_str = str(erros)  # Converte a lista de erros em uma string
+    corrida = Corrida(p=p, i=i, d=d, initial_speed=initial_speed, erros=erros_str, conceito=int(conceito))
 
     # Adiciona a corrida à sessão
     session.add(corrida)
@@ -56,6 +56,5 @@ def gravar_corrida():
     session.commit()
 
     print("Dados gravados com sucesso.")
-
 
 gravar_corrida()

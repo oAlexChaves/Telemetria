@@ -21,6 +21,7 @@ def visualizar_corridas():
         print(f"D: {corrida.d}")
         print(f"Velocidade Inicial: {corrida.initial_speed}")
         print(f"Erros: {corrida.erros}")
+        print(f"Conceito: {corrida.conceito}")  # Adiciona a exibição do conceito
         print()
 
 if __name__ == "__main__":

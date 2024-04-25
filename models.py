@@ -11,4 +11,5 @@ class Corrida(Base):
     i = Column(Float)
     d = Column(Float)
     initial_speed = Column(Float)
-    erros = Column(Text)  # Alterado para armazenar JSON
+    erros = Column(Text)
+    conceito = Column(Integer)  # Adicionando o campo 'conceito'
