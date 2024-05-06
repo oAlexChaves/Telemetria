@@ -21,7 +21,11 @@ def visualizar_corridas():
         print(f"D: {corrida.d}")
         print(f"Velocidade Inicial: {corrida.initial_speed}")
         print(f"Erros: {corrida.erros}")
-        print(f"Conceito: {corrida.conceito}")  # Adiciona a exibição do conceito
+        print(f"Conceito: {corrida.conceito}")
+        print(f"Seguiu a Linha: {corrida.seguiu_linha}")  # Adiciona a exibição de 'seguir a linha'
+        print(f"Tempo: {corrida.tempo}")  # Adiciona a exibição do tempo
+        print(f"Oscilação: {corrida.oscilacao}")  # Adiciona a exibição da oscilação
+        print(f"Observação: {corrida.observacao}")  # Adiciona a exibição da observação
         print()
 
 if __name__ == "__main__":

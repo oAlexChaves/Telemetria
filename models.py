@@ -13,3 +13,7 @@ class Corrida(Base):
     initial_speed = Column(Float)
     erros = Column(Text)
     conceito = Column(Integer)  # Adicionando o campo 'conceito'
+    seguiu_linha = Column(Text)
+    tempo = Column(Integer)
+    oscilacao = Column(Text)
+    observacao = Column(Text)
