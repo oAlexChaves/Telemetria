@@ -1,10 +1,12 @@
+import customtkinter
 import serial
 import datetime
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+
+from main import app
 from models import Corrida
-from teste_porta import find_port
 
 # Criando a engine e conectando ao banco de dados SQLite
 engine = create_engine('sqlite:///dados_corrida.db', echo=True)
@@ -18,10 +20,11 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
+gravar_frame = customtkinter.CTk(app)
+
 
 def gravar_corrida():
 
-    find_port()
     ser = serial.Serial('COM3', 9600)  # Modifique para a porta e a taxa de baud do seu Arduino
     # Lê os valores da porta serial
     p = float(ser.readline().decode().strip())
