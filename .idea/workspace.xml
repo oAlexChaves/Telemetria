@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83d34b14-d668-4b6c-921c-b040ff614288" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excluir_corrida.py" beforeDir="false" afterPath="$PROJECT_DIR$/excluir_corrida.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gravador.py" beforeDir="false" afterPath="$PROJECT_DIR$/gravador.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste_porta.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste_porta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ver_corridas.py" beforeDir="false" afterPath="$PROJECT_DIR$/ver_corridas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,7 @@
       <recent name="C:\Users\Willi\OneDrive\Documentos\projetos python\Telemetria\negocios" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.gravador">
     <configuration name="gravador" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Telemetria" />
       <option name="ENV_FILES" value="" />
@@ -206,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.gravador" />
         <item itemvalue="Python.ver_corridas" />
         <item itemvalue="Python.teste" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.teste_porta (1)" />
-        <item itemvalue="Python.gravador" />
       </list>
     </recent_temporary>
   </component>

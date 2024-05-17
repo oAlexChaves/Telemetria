@@ -18,7 +18,7 @@ botao_gravar = ctk.CTkButton(home_frame, text="CTkButton")
 botao_gravar.pack(side="left", pady=15)
 
 texto_ver_corridas = ctk.CTkLabel(home_frame, text="Ver corridas", fg_color="transparent", font=('', 20))
-texto_ver_corridas.pack(side="left", pady=15)
+texto_ver_corridas.pack(side="left", pady=15, padx=15)
 
 botao_ver = ctk.CTkButton(home_frame, text="CTkButton", command=visualizar_corridas)
 botao_ver.pack(side="left", pady=15)
