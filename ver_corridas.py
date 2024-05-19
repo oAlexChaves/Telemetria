@@ -13,17 +13,19 @@ engine = create_engine('sqlite:///dados_corrida.db', echo=True)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-def visualizar_corridas():
+def visualizar_corridas(parent):
     # Consulta todas as corridas no banco de dados
     corridas = session.query(Corrida).all()
 
-    # Criando uma nova janel
-    app = ctk.CTk()
-    app.geometry("600x500")
-    app.title("LinePID Monitor")
+    # Cria um novo Tabview dentro do widget pai (parent)
+    tree_tabview = ctk.CTkTabview(parent)
+    tree_tabview.pack(expand=True, fill="both")
+
+    # Adiciona uma aba ao Tabview
+    races_tab = tree_tabview.add("Corridas")
 
     # Criando o Treeview para exibir as informações das corridas
-    tree = ttk.Treeview(app)
+    tree = ttk.Treeview(races_tab)
 
     # Definindo as colunas da tabela
     tree["columns"] = ("ID", "P", "I", "D", "Velocidade Inicial", "Erros", "Conceito", "Seguiu a Linha", "Tempo", "Oscilação", "Observação")
@@ -65,9 +67,3 @@ def visualizar_corridas():
 
     # Exibindo o Treeview
     tree.pack(expand=True, fill=tk.BOTH)
-
-    # Iniciando o loop principal da aplicação
-    app.mainloop()
-
-if __name__ == "__main__":
-    visualizar_corridas()
