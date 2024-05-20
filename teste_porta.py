@@ -1,6 +1,6 @@
 import serial.tools.list_ports
 
-def find_port(keyword):
+def find_port():
     for port in serial.tools.list_ports.comports():
         try:
             ser = serial.Serial(port.device)
