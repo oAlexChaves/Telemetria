@@ -1,32 +1,28 @@
-import customtkinter as ctk
+from gravador import gravar_corrida
 from ver_corridas import visualizar_corridas
+from algoritmo_genetico import algoritmo_genetico
 
-# Inicialização do aplicativo
-app = ctk.CTk()
-app.geometry("600x500")
-app.title("LinePID Monitor")
+def menu():
+    while True:
+        print("\nMenu:")
+        print("1. Iniciar uma nova corrida.")
+        print("2. Visualizar dados de corridas anteriores.")
+        print("3. Algoritmo genetico.")
+        print("4. Sair.")
 
-# Criação do Tabview
-tabview = ctk.CTkTabview(app)
-tabview.pack(expand=True, fill="both")
+        escolha = input("Escolha uma opção: ")
 
-# Adição das abas
-home_tab = tabview.add("Home")
-gravador_tab = tabview.add("gravador")
-races_tab = tabview.add("Ver Corridas")
+        if escolha == "1":
+            gravar_corrida()
+        elif escolha == "2":
+            visualizar_corridas()
+        elif escolha == "3":
+            algoritmo_genetico()
+        elif escolha == "4":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida. Por favor, escolha novamente.")
 
-# Configuração da aba Home
-label = ctk.CTkLabel(home_tab, text="LinePID Monitor", fg_color="transparent", font=('', 40))
-label.pack(pady=10)
-
-texto_gravar_corrida = ctk.CTkLabel(home_tab, text="Gravar corrida", fg_color="transparent", font=('', 20))
-texto_gravar_corrida.pack(pady=15)
-
-botao_gravar = ctk.CTkButton(home_tab, text="CTkButton")  # Adicione a função de gravação aqui
-botao_gravar.pack(pady=15)
-
-# Chama a função visualizar_corridas e passa a aba races_tab como parent
-visualizar_corridas(races_tab)
-
-# Início do aplicativo
-app.mainloop()
+if __name__ == "__main__":
+    menu()

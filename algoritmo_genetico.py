@@ -1,9 +1,7 @@
 import random
-
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
 from models import Corrida
 
 # Criando a engine e conectando ao banco de dados SQLite
