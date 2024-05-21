@@ -7,7 +7,7 @@ from models import Corrida
 from teste_porta import find_port
 
 # Criando a engine e conectando ao banco de dados SQLite
-engine = create_engine('sqlite:///dados_corrida.db', echo=True)
+engine = create_engine('sqlite:///dados_corrida.db', echo=False)
 
 Base = sqlalchemy.orm.declarative_base()
 
@@ -20,36 +20,49 @@ session = Session()
 
 def gravar_corrida():
     try:
-        porta_robo = find_port()
-        ser = serial.Serial(porta_robo, 9600)  # Modifique para a porta e a taxa de baud do seu Arduino
+        keyword = "porta de saída"
+        porta_robo = find_port(keyword)
+        if not porta_robo:
+            raise Exception("Porta não encontrada")
 
-        p = float(input("Digite o valor de P: "))
-        i = float(input("Digite o valor de I: "))
-        d = float(input("Digite o valor de D: "))
-        initial_speed = float(input("Digite o valor de da velocidade incial: "))
+        print(porta_robo)
+        ser = None
+        try:
+            ser = serial.Serial(porta_robo, 9600)  # Modifique para a porta e a taxa de baud do seu Arduino
+        except Exception as e:
+            raise Exception(f"Erro ao conectar à porta serial: {e}")
+
+        try:
+            p = float(input("Digite o valor de P: "))
+            i = float(input("Digite o valor de I: "))
+            d = float(input("Digite o valor de D: "))
+            initial_speed = float(input("Digite o valor de da velocidade inicial: "))
+        except ValueError:
+            raise ValueError("Valores de P, I, D e velocidade inicial devem ser números")
 
         # Envia os valores P, I, D ao Arduino
         pid_values = f"{p} {i} {d} {initial_speed}\n"
         ser.write(pid_values.encode())
 
         print(f"Velocidade Inicial: {initial_speed}")
-
         print("PID e velocidade inicial gravada!")
 
         erros = []
 
         # Aguarda mensagem de fim do Arduino
-        print("Aguardando fim da corrida...")
         while True:
-            line = ser.readline().decode().strip()
+            line = ser.readline().decode('utf-8', errors='ignore').strip()
             if line == "START":
+                ser.write('funcionando'.encode())
                 start_time = datetime.datetime.now()
                 print("Corrida Começou!")
                 break
+        print("Aguardando fim da corrida...")
 
         while True:
-            line = ser.readline().decode().strip()
+            line = ser.readline().decode('utf-8', errors='ignore').strip()
             if line == "END":
+                ser.write('finalizado'.encode())
                 end_time = datetime.datetime.now()
                 print("Corrida finalizada!")
                 break
@@ -87,7 +100,7 @@ def gravar_corrida():
         observacao = input("Observação: ")
 
         erros_str = str(erros)
-        corrida = Corrida(p=str(p), i=str(i), d=str(d), initial_speed=initial_speed, erros=erros_str,
+        corrida = Corrida(p=p, i=i, d=d, initial_speed=initial_speed, erros=erros_str,
                           conceito=int(conceito), tempo=tempo_decorrido_em_segundos,
                           seguiu_linha=seguiu_linha, oscilacao=oscilacao, observacao=observacao)
 
@@ -97,6 +110,9 @@ def gravar_corrida():
         print("Dados gravados com sucesso.")
     except Exception as e:
         print(f"Erro: {e}")
+    finally:
+        if ser and ser.is_open:
+            ser.close()
 
 if __name__ == "__main__":
     gravar_corrida()
