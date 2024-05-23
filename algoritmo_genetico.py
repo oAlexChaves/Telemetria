@@ -36,7 +36,20 @@ def misturar_valores(pai1, pai2):
 
         # Verificar se os valores não são todos iguais
         if (novo_p1, novo_i1, novo_d1) != (novo_p2, novo_i2, novo_d2):
+            # Aplica mutação nos valores de I e D para os dois novos indivíduos
+            novo_i1 = mutacao(novo_i1)
+            novo_d1 = mutacao(novo_d1)
+
+            novo_i2 = mutacao(novo_i2)
+            novo_d2 = mutacao(novo_d2)
+
             return (novo_p1, novo_i1, novo_d1), (novo_p2, novo_i2, novo_d2)
+
+def mutacao(valor):
+    # Aplica uma mutação de ±10% no valor fornecido
+    mutacao_fator = random.uniform(-0.1, 0.1)
+    valor_mutado = valor + valor * mutacao_fator
+    return valor_mutado
 
 # Algoritmo genético
 def algoritmo_genetico():
