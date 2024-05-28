@@ -20,13 +20,10 @@ session = Session()
 
 def gravar_corrida():
     try:
+        ser = None
         keyword = "porta de saída"
         porta_robo = find_port(keyword)
-        if not porta_robo:
-            raise Exception("Porta não encontrada")
 
-        print(porta_robo)
-        ser = None
         try:
             ser = serial.Serial(porta_robo, 9600)  # Modifique para a porta e a taxa de baud do seu Arduino
         except Exception as e:
@@ -43,6 +40,7 @@ def gravar_corrida():
         # Envia os valores P, I, D ao Arduino
         pid_values = f"{p} {i} {d} {initial_speed}\n"
         ser.write(pid_values.encode())
+        ser.flush()  # Assegura que todos os dados sejam enviados
 
         print(f"Velocidade Inicial: {initial_speed}")
         print("PID e velocidade inicial gravada!")
@@ -113,6 +111,6 @@ def gravar_corrida():
     finally:
         if ser and ser.is_open:
             ser.close()
-
+ 
 if __name__ == "__main__":
     gravar_corrida()
