@@ -4,8 +4,10 @@ from models import Corrida
 # Criando a engine e conectando ao banco de dados SQLite
 engine = create_engine('sqlite:///dados_corrida.db', echo=False)
 # Criando uma sessão para interagir com o banco de dados
+
 Session = sessionmaker(bind=engine)
 session = Session()
+
 def visualizar_corridas():
     # Consulta todas as corridas no banco de dados
     corridas = session.query(Corrida).all()

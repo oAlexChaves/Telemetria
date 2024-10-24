@@ -1,6 +1,6 @@
 import serial
 import datetime
-import sqlalchemy
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Corrida
@@ -8,8 +8,8 @@ from teste_porta import find_port
 
 # Criando a engine e conectando ao banco de dados SQLite
 engine = create_engine('sqlite:///dados_corrida.db', echo=False)
+Base = declarative_base()
 
-Base = sqlalchemy.orm.declarative_base()
 
 # Criando as tabelas no banco de dados, se não existirem
 Base.metadata.create_all(engine)
@@ -19,6 +19,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 def gravar_corrida():
+    print("teste")
     try:
         keyword = "porta de saída"
         porta_robo = find_port(keyword)

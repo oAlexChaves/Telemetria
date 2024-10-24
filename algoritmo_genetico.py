@@ -54,6 +54,3 @@ def algoritmo_genetico():
         print("\nDois novos conjuntos de valores de P, I e D após mistura:")
         print(f"Conjunto 1: P={novo_individuo1[0]}, I={novo_individuo1[1]}, D={novo_individuo1[2]}")
         print(f"Conjunto 2: P={novo_individuo2[0]}, I={novo_individuo2[1]}, D={novo_individuo2[2]}")
-
-# Executar o AG
-algoritmo_genetico()
