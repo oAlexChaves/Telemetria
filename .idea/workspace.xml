@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="83d34b14-d668-4b6c-921c-b040ff614288" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/dados_corrida.db" beforeDir="false" afterPath="$PROJECT_DIR$/dados_corrida.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gravador.py" beforeDir="false" afterPath="$PROJECT_DIR$/gravador.py" afterDir="false" />
+=======
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/teste_porta.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste_porta.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +43,10 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Python.algoritmo-genetico.executor&quot;: &quot;Run&quot;,
+<<<<<<< Updated upstream
     &quot;Python.algoritmo_genetico.executor&quot;: &quot;Run&quot;,
+=======
+>>>>>>> Stashed changes
     &quot;Python.atualizar.executor&quot;: &quot;Run&quot;,
     &quot;Python.excluir_corrida.executor&quot;: &quot;Run&quot;,
     &quot;Python.gravador.executor&quot;: &quot;Run&quot;,
@@ -53,9 +59,15 @@
     &quot;Python.ver_corridas.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+<<<<<<< Updated upstream
     &quot;git-widget-placeholder&quot;: &quot;sem-GUI&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/alex/Documentos/GitHub/Telemetria&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;PyConsoleConfigurable.Python Console&quot;
+=======
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alex/Documentos/GitHub/Telemetria&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+>>>>>>> Stashed changes
   }
 }</component>
   <component name="PyConsoleOptionsProvider">

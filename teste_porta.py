@@ -1,12 +1,10 @@
 import serial
 import serial.tools.list_ports
 
-
 def list_ports():
     ports = serial.tools.list_ports.comports()
-    for port in ports:
-        print(f"Porta encontrada: {port.device} - {port.description}")
-
+    for i, port in enumerate(ports, start=1):
+        print(f"{i}. Porta encontrada: {port.device} - {port.description}")
 
 def find_port(keyword):
     print("Começando a busca...")
@@ -20,10 +18,10 @@ def find_port(keyword):
         try:
             print(f"Testando porta {port.device}")
             ser = serial.Serial(port.device, 9600, timeout=1)
-            ser.write("Porta achada\n".encode())
+            ser.write("Porta achada".encode())
             response = ser.readline().decode().strip()
             if response == keyword:
-                ser.write("Porta achada\n".encode())  # Escrevendo a mensagem na porta
+                ser.write("Porta achada".encode())  # Escrevendo a mensagem na porta
                 ser.close()
                 return port.device
             ser.close()
@@ -38,4 +36,4 @@ def find_port(keyword):
 
 # Listar todas as portas disponíveis
 list_ports()
-
+find_port()
